@@ -4,7 +4,27 @@
 	box-sizing: border-box;
 }
 
+h1 {
+	color: #426696;
+	font-weight: 600;
+	font-size: 2rem;
+	opacity: 0.8;
+}
+
+h3 {
+	color: #426696;
+	font-weight: 600;
+	opacity: 0.8;
+}
+
+h2 {
+	color: #658ec6;
+	font-weight: 500%;
+	opacity: 0.8;
+}
+
 main {
+	font-family: 'Poppins', sans-serif;
 	min-height: 100vh;
 	background: linear-gradient(to right top, #65dfc9, #6cdbeb);
 	display: flex;
@@ -25,6 +45,7 @@ main {
 	border-radius: 2rem;
 	z-index: 2;
 	backdrop-filter: blur(1rem);
+	display: flex;
 }
 
 .circle1,
@@ -41,9 +62,9 @@ main {
 	position: absolute;
 }
 
-.avatar,
-img {
+.avatar img {
 	border-radius: 50%;
+	width: 8rem;
 }
 
 .circle1 {
@@ -54,4 +75,129 @@ img {
 .circle2 {
 	top: 50%;
 	right: 10%;
+}
+
+.dashboard {
+	border-radius: 2rem;
+	flex: 1;
+	display: flex;
+	padding: 2rem 0;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	text-align: center;
+	background: linear-gradient(
+		to right bottom,
+		rgba(255, 255, 255, 0.9),
+		rgba(255, 255, 255, 0.3)
+	);
+}
+
+.link {
+	display: flex;
+	margin: 0.8rem 0rem;
+	padding: 0.5rem 5rem;
+	align-items: center;
+}
+
+.link h2 {
+	padding: 0rem 2rem;
+	font-size: 0.9rem;
+}
+.link img {
+	width: 1.5rem;
+}
+
+.pro {
+	background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+	border-radius: 2rem;
+	color: white;
+	padding: 1rem 0;
+	display: flex;
+	position: relative;
+}
+
+.pro h2 {
+	width: 40%;
+	font-weight: 600;
+	color: white;
+}
+
+.pro-text {
+	margin-left: 10px;
+}
+
+.pro img {
+	position: absolute;
+	top: 0%;
+	right: 10%;
+	width: 90px;
+}
+
+.games {
+	flex: 2;
+	margin: 2rem;
+	display: flex;
+	flex-direction: column;
+}
+
+/* GAMES */
+
+.status {
+	margin-bottom: 2rem;
+}
+
+.status input {
+	background: linear-gradient(
+		to right bottom,
+		rgba(255, 255, 255, 0.8),
+		rgba(255, 255, 255, 0.3)
+	);
+	border: none;
+	border-radius: 1rem;
+	width: 50%;
+}
+
+.card {
+	display: flex;
+	background: linear-gradient(
+		to right bottom,
+		rgba(255, 255, 255, 0.9),
+		rgba(255, 255, 255, 0.3)
+	);
+	border-radius: 2rem;
+	margin: 1rem 0;
+	padding: 0.8rem;
+	box-shadow: 6px 6px 10px rgba(122, 122, 122, 0.2);
+	justify-content: space-between;
+}
+
+.progress {
+	background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+	width: 100%;
+	height: 15%;
+	border-radius: 1rem;
+	position: relative;
+	overflow: hidden;
+}
+
+.progress::after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: rgb(236, 236, 236);
+	position: absolute;
+	left: 60%;
+}
+
+.card-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+h3 .presentage {
+	background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
