@@ -44,6 +44,7 @@
 				bottom: -30px;
 				background: linear-gradient(to left, $limeGreen, $brightCyan);
 				opacity: 0;
+				transition: opacity 300ms ease-in-out;
 			}
 			&:hover {
 				color: $darkBlue;
@@ -54,6 +55,7 @@
 						$limeGreen,
 						$brightCyan
 					);
+					opacity: 1;
 				}
 			}
 		}
@@ -61,5 +63,10 @@
 
 	&_cta {
 		font-size: 0.875rem;
+		transition: opacity 300ms ease-in-out;
+
+		&:hover {
+			opacity: 0.75;
+		}
 	}
 }

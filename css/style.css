@@ -119,6 +119,8 @@ button,
   background: -webkit-gradient(linear, right top, left top, from(#31d35c), to(#2bb7da));
   background: linear-gradient(to left, #31d35c, #2bb7da);
   opacity: 0;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
 }
 
 .header_links a:hover {
@@ -128,9 +130,16 @@ button,
 .header_links a:hover::before {
   background: -webkit-gradient(linear, right top, left top, from(#31d35c), to(#2bb7da));
   background: linear-gradient(to left, #31d35c, #2bb7da);
+  opacity: 1;
 }
 
 .header_cta {
   font-size: 0.875rem;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+}
+
+.header_cta:hover {
+  opacity: 0.75;
 }
 /*# sourceMappingURL=style.css.map */
