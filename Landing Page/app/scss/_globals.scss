@@ -25,6 +25,15 @@ a:hover {
 	text-decoration: none;
 }
 
+.container {
+	padding-right: 1.5rem;
+	padding-left: 1.5rem;
+}
+
+.noscroll {
+	overflow: hidden;
+}
+
 // Flexbox
 .flex {
 	display: flex;
