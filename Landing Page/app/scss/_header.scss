@@ -67,15 +67,6 @@
 		}
 	}
 
-	&_cta {
-		font-size: 0.875rem;
-		transition: opacity 300ms ease-in-out;
-
-		&:hover {
-			opacity: 0.75;
-		}
-	}
-
 	// Hamburger open style
 	&.open {
 		.header_toggle {

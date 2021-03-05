@@ -19,6 +19,12 @@ body {
 	color: $grayishBlue;
 }
 
+h1,
+h2,
+h3 {
+	margin-top: 0;
+}
+
 a,
 a:visited,
 a:hover {
@@ -26,8 +32,7 @@ a:hover {
 }
 
 .container {
-	padding-right: 1.5rem;
-	padding-left: 1.5rem;
+	padding: 2.25rem 1.5rem;
 }
 
 .noscroll {
@@ -54,6 +59,8 @@ a:hover {
 // Buttons
 button,
 .button {
+	font-size: $font-sm;
+	display: inline-block;
 	padding: 0.875rem 1.875rem;
 	border-radius: 50px;
 	cursor: pointer;
@@ -61,6 +68,12 @@ button,
 	border: none;
 	color: white;
 	font-weight: 400;
+
+	transition: opacity 300ms ease-in-out;
+
+	&:hover {
+		opacity: 0.75;
+	}
 }
 
 // Visibility
