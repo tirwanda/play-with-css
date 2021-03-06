@@ -32,7 +32,36 @@ a:hover {
 }
 
 .container {
-	padding: 2.25rem 1.5rem;
+	max-width: 69.375rem;
+	margin: 0 auto;
+
+	&-pxy {
+		padding: 2.25rem 1.5rem;
+	}
+
+	&-py {
+		padding: 2.25rem 0;
+	}
+
+	&-px {
+		padding: 0 1.5rem;
+	}
+
+	&-pt {
+		padding-top: 2.25rem;
+	}
+
+	&-pr {
+		padding-right: 1.5rem;
+	}
+
+	&-pb {
+		padding-bottom: 2.25rem;
+	}
+
+	&-pl {
+		padding-left: 1.5rem;
+	}
 }
 
 .noscroll {

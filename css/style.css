@@ -93,7 +93,36 @@ a:hover {
 }
 
 .container {
+  max-width: 69.375rem;
+  margin: 0 auto;
+}
+
+.container-pxy {
   padding: 2.25rem 1.5rem;
+}
+
+.container-py {
+  padding: 2.25rem 0;
+}
+
+.container-px {
+  padding: 0 1.5rem;
+}
+
+.container-pt {
+  padding-top: 2.25rem;
+}
+
+.container-pr {
+  padding-right: 1.5rem;
+}
+
+.container-pb {
+  padding-bottom: 2.25rem;
+}
+
+.container-pl {
+  padding-left: 1.5rem;
 }
 
 .noscroll {
@@ -267,6 +296,17 @@ button:hover,
   text-align: center;
 }
 
+@media (min-width: 64em) {
+  .hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .hero_image {
   position: relative;
   background-image: url("../Landing Page/images/bg-intro-mobile.svg");
@@ -274,6 +314,20 @@ button:hover,
   background-repeat: no-repeat;
   background-position: center center;
   min-height: 17.5rem;
+}
+
+@media (min-width: 64em) {
+  .hero_image {
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    min-height: 40.9375rem;
+    background-image: url("../Landing Page/images/bg-intro-desktop.svg");
+    background-position: left center;
+  }
 }
 
 .hero_image::before {
@@ -292,6 +346,18 @@ button:hover,
   text-align: center;
 }
 
+@media (min-width: 64em) {
+  .hero_text {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    text-align: left;
+  }
+}
+
 .hero_text h1 {
   color: #2d364d;
   font-weight: 300;
@@ -300,7 +366,19 @@ button:hover,
   margin-bottom: 1.5rem;
 }
 
+@media (min-width: 64em) {
+  .hero_text h1 {
+    font-size: 3.25rem;
+  }
+}
+
 .hero_text p {
   line-height: 1.5;
+}
+
+@media (min-width: 64em) {
+  .hero_text p {
+    font-size: 1.125rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
