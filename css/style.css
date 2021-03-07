@@ -296,8 +296,12 @@ button:hover,
   text-align: center;
 }
 
+.hero {
+  background-color: #fafafa;
+}
+
 @media (min-width: 64em) {
-  .hero {
+  .hero .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -325,8 +329,7 @@ button:hover,
         -ms-flex-order: 2;
             order: 2;
     min-height: 40.9375rem;
-    background-image: url("../Landing Page/images/bg-intro-desktop.svg");
-    background-position: left center;
+    background-image: none;
   }
 }
 
@@ -335,11 +338,44 @@ button:hover,
   position: absolute;
   height: 100%;
   width: 100%;
-  background-image: url("../Landing Page/images/image-mockups.png");
+  background-image: url("../Landing Page/images/bg-intro-desktop.svg");
   background-size: 93%;
   background-repeat: no-repeat;
   background-position: center bottom;
   min-height: 17.5rem;
+}
+
+@media (min-width: 64em) {
+  .hero_image::before {
+    width: 150%;
+    background-size: 121%;
+    background-repeat: no-repeat;
+    background-position: 0% 83%;
+    min-height: 17.5rem;
+  }
+}
+
+.hero_image::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url("../Landing Page/images/image-mockups.png");
+  background-size: 121%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  min-height: 17.5rem;
+}
+
+@media (min-width: 64em) {
+  .hero_image::after {
+    height: 120%;
+    width: 119%;
+    background-size: 93%;
+    background-position: center 122%;
+    top: 0;
+    left: 24%;
+  }
 }
 
 .hero_text {
