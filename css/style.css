@@ -316,8 +316,14 @@ button:hover,
   background-image: url("../Landing Page/images/bg-intro-mobile.svg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center 62%;
   min-height: 17.5rem;
+}
+
+@media (min-width: 40em) {
+  .hero_image {
+    min-height: 25rem;
+  }
 }
 
 @media (min-width: 64em) {
@@ -335,23 +341,18 @@ button:hover,
 
 .hero_image::before {
   content: '';
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-image: url("../Landing Page/images/bg-intro-desktop.svg");
-  background-size: 93%;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  min-height: 17.5rem;
 }
 
 @media (min-width: 64em) {
   .hero_image::before {
+    position: absolute;
+    height: 100%;
+    background-image: url("../Landing Page/images/bg-intro-desktop.svg");
+    background-position: center bottom;
     width: 150%;
     background-size: 121%;
     background-repeat: no-repeat;
     background-position: 0% 83%;
-    min-height: 17.5rem;
   }
 }
 
@@ -361,10 +362,15 @@ button:hover,
   height: 100%;
   width: 100%;
   background-image: url("../Landing Page/images/image-mockups.png");
-  background-size: 121%;
+  background-size: 93%;
   background-repeat: no-repeat;
   background-position: center bottom;
-  min-height: 17.5rem;
+}
+
+@media (min-width: 40em) {
+  .hero_image::after {
+    background-size: 54%;
+  }
 }
 
 @media (min-width: 64em) {
@@ -373,7 +379,6 @@ button:hover,
     width: 119%;
     background-size: 93%;
     background-position: center 122%;
-    top: 0;
     left: 24%;
   }
 }
