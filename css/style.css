@@ -422,4 +422,20 @@ button:hover,
     font-size: 1.125rem;
   }
 }
+
+@media (min-width: 64em) {
+  .feature_grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 64em) {
+  .feature_item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
 /*# sourceMappingURL=style.css.map */
