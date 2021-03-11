@@ -78,6 +78,7 @@ body {
   font-weight: 300;
   font-size: 1.125rem;
   color: #9698a6;
+  overflow-x: hidden;
 }
 
 h1,
@@ -613,5 +614,14 @@ button:hover,
 
 .article_description {
   font-size: 0.8125rem;
+}
+
+.footer {
+  background-color: #2d364d;
+  color: white;
+}
+
+.footer a {
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
