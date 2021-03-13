@@ -4,6 +4,16 @@
 	padding: 2.5rem;
 	text-align: center;
 
+	@include breakpoint-up(large) {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr) 2fr;
+		grid-template-rows: repeat(2, 1fr);
+		grid-template-areas:
+			'logo links1 links2 cta'
+			'social links1 links2 cta';
+		justify-items: start;
+	}
+
 	a {
 		color: $white;
 	}
@@ -11,10 +21,18 @@
 	&_logo {
 		margin-bottom: 1.875rem;
 		display: inline-block;
+
+		@include breakpoint-up(large) {
+			grid-area: logo;
+		}
 	}
 
 	&_social {
 		margin-bottom: 1.875rem;
+
+		@include breakpoint-up(large) {
+			grid-area: social;
+		}
 
 		a {
 			display: inline-block;
@@ -30,20 +48,37 @@
 		flex-direction: column;
 		align-items: center;
 
+		@include breakpoint-up(large) {
+			align-items: start;
+		}
+
 		a {
 			line-height: 2.25;
 		}
 
 		&.col-1 {
+			@include breakpoint-up(large) {
+				grid-area: links1;
+			}
 		}
 
 		&.col-2 {
 			margin-bottom: 1.875rem;
+			@include breakpoint-up(large) {
+				grid-area: links2;
+			}
 		}
 	}
 
 	&_cta {
-		margin-bottom: 1.875rem;
+		@include breakpoint-up(large) {
+			grid-area: cta;
+			justify-self: end;
+		}
+
+		a {
+			margin-bottom: 1.875rem;
+		}
 	}
 
 	&_copyright {
