@@ -4,14 +4,16 @@
 	padding: 2.5rem;
 	text-align: center;
 
-	@include breakpoint-up(large) {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr) 2fr;
-		grid-template-rows: repeat(2, 1fr);
-		grid-template-areas:
-			'logo links1 links2 cta'
-			'social links1 links2 cta';
-		justify-items: start;
+	.container {
+		@include breakpoint-up(large) {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr) 2fr;
+			grid-template-rows: repeat(2, 1fr);
+			grid-template-areas:
+				'logo links1 links2 cta'
+				'social links1 links2 copyright';
+			justify-items: start;
+		}
 	}
 
 	a {
@@ -19,8 +21,11 @@
 	}
 
 	&_logo {
-		margin-bottom: 1.875rem;
 		display: inline-block;
+
+		@include breakpoint-down(medium) {
+			margin-bottom: 1.875rem;
+		}
 
 		@include breakpoint-up(large) {
 			grid-area: logo;
@@ -28,10 +33,13 @@
 	}
 
 	&_social {
-		margin-bottom: 1.875rem;
+		@include breakpoint-down(medium) {
+			margin-bottom: 1.875rem;
+		}
 
 		@include breakpoint-up(large) {
 			grid-area: social;
+			align-self: end;
 		}
 
 		a {
@@ -39,7 +47,7 @@
 		}
 
 		a:not(:last-child) {
-			margin-right: 1rem;
+			margin-right: 0.675rem;
 		}
 	}
 
@@ -47,9 +55,11 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		font-size: 0.9357rem;
 
 		@include breakpoint-up(large) {
 			align-items: start;
+			justify-content: space-between;
 		}
 
 		a {
@@ -63,7 +73,10 @@
 		}
 
 		&.col-2 {
-			margin-bottom: 1.875rem;
+			@include breakpoint-down(medium) {
+				margin-bottom: 1.875rem;
+			}
+
 			@include breakpoint-up(large) {
 				grid-area: links2;
 			}
@@ -73,14 +86,24 @@
 	&_cta {
 		@include breakpoint-up(large) {
 			grid-area: cta;
+			text-align: right;
 			justify-self: end;
 		}
 
-		a {
-			margin-bottom: 1.875rem;
+		a.button {
+			@include breakpoint-down(medium) {
+				margin-bottom: 1.875rem;
+			}
 		}
 	}
 
 	&_copyright {
+		font-size: 0.8125rem;
+		color: $grayishBlue;
+		@include breakpoint-up(large) {
+			grid-area: copyright;
+			justify-self: end;
+			align-self: end;
+		}
 	}
 }

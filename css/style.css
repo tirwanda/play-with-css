@@ -624,14 +624,14 @@ button:hover,
 }
 
 @media (min-width: 64em) {
-  .footer {
+  .footer .container {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[3] 2fr;
         grid-template-columns: repeat(3, 1fr) 2fr;
     -ms-grid-rows: (1fr)[2];
         grid-template-rows: repeat(2, 1fr);
-        grid-template-areas: 'logo links1 links2 cta' 'social links1 links2 cta';
+        grid-template-areas: 'logo links1 links2 cta' 'social links1 links2 copyright';
     justify-items: start;
   }
 }
@@ -641,8 +641,13 @@ button:hover,
 }
 
 .footer_logo {
-  margin-bottom: 1.875rem;
   display: inline-block;
+}
+
+@media (max-width: 63.9375em) {
+  .footer_logo {
+    margin-bottom: 1.875rem;
+  }
 }
 
 @media (min-width: 64em) {
@@ -651,13 +656,18 @@ button:hover,
   }
 }
 
-.footer_social {
-  margin-bottom: 1.875rem;
+@media (max-width: 63.9375em) {
+  .footer_social {
+    margin-bottom: 1.875rem;
+  }
 }
 
 @media (min-width: 64em) {
   .footer_social {
     grid-area: social;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
   }
 }
 
@@ -666,7 +676,7 @@ button:hover,
 }
 
 .footer_social a:not(:last-child) {
-  margin-right: 1rem;
+  margin-right: 0.675rem;
 }
 
 .footer_links {
@@ -680,6 +690,7 @@ button:hover,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 0.9357rem;
 }
 
 @media (min-width: 64em) {
@@ -687,6 +698,9 @@ button:hover,
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -700,8 +714,10 @@ button:hover,
   }
 }
 
-.footer_links.col-2 {
-  margin-bottom: 1.875rem;
+@media (max-width: 63.9375em) {
+  .footer_links.col-2 {
+    margin-bottom: 1.875rem;
+  }
 }
 
 @media (min-width: 64em) {
@@ -713,12 +729,31 @@ button:hover,
 @media (min-width: 64em) {
   .footer_cta {
     grid-area: cta;
+    text-align: right;
     -ms-grid-column-align: end;
         justify-self: end;
   }
 }
 
-.footer_cta a {
-  margin-bottom: 1.875rem;
+@media (max-width: 63.9375em) {
+  .footer_cta a.button {
+    margin-bottom: 1.875rem;
+  }
+}
+
+.footer_copyright {
+  font-size: 0.8125rem;
+  color: #9698a6;
+}
+
+@media (min-width: 64em) {
+  .footer_copyright {
+    grid-area: copyright;
+    -ms-grid-column-align: end;
+        justify-self: end;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+  }
 }
 /*# sourceMappingURL=style.css.map */
